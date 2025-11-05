@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Aseemakram19/starbucks-kubernetes.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/basid182/starbucks-kubernetes.git'
             }
         }
         stage("Sonarqube Analysis "){
@@ -61,12 +61,12 @@ pipeline{
         }
         stage('App Deploy to Docker container'){
             steps{
-                sh 'docker run -d --name starbucks -p 3000:3000 aseemakram19/starbucks:latest'
+                sh 'docker run -d --name starbucks -p 3000:3000 basid182/starbucks:latest'
             }
         }
 
     }
-    post {
+    /* post {
     always {
         script {
             def buildStatus = currentBuild.currentResult
@@ -89,7 +89,7 @@ pipeline{
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
            }
-       }
+       } */
 
     }
 
