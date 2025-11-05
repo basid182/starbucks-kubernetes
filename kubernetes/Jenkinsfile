@@ -72,7 +72,7 @@ pipeline{
         }
 
     }
-    post {
+    /* post {
     always {
         script {
             def buildStatus = currentBuild.currentResult
@@ -95,11 +95,12 @@ pipeline{
                 attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
             )
            }
-       }
+       } */
 
     }
 
 }
+
 
 
 
