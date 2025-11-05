@@ -15,7 +15,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/basid182/starbucks-kubernetes.git'
+                git branch: 'main', url: 'https://github.com/basid182/starbucks-kubernetes.git'
             }
         }
         stage("Sonarqube Analysis "){
