@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: starbucks-container
-        image: alie1236/starbucks
+        image: alie12361/starbucks
         ports:
         - containerPort: 3000
 ---
@@ -32,4 +32,5 @@ spec:
   ports:
   - port: 80
     targetPort: 3000
+
 
